@@ -33,3 +33,9 @@ $ kubectl create -f manifests-start -f autoscaling/front-end-hsc.yaml
 $ kubectl replace -f manifests-update/front-end-dep.yaml
 $ kubectl rollout status deployment/front-end --namespace=sock-shop
 ```
+
+## Rollback
+
+```
+$ kubectl rollout undo deployment/front-end --namespace=sock-shop
+```

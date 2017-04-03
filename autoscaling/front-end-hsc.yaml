@@ -9,7 +9,7 @@ spec:
     kind: Deployment
     name: front-end
     subresource: scale
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 5
   cpuUtilization:
     targetPercentage: 10
