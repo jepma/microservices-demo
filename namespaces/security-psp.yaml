@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: PodSecurityPolicy
+metadata:
+  name: sock-shop
+spec:
+  allowedCapabilities:
+  - IPC_LOCK
+  - NET_RAW
+  - NET_BIND_SERVICE
+  - SETGID
+  - SETUID
+  - DAC_OVERRIDE
+  - CHOWN
+  fsGroup:
+    rule: RunAsAny
+  hostNetwork: true
+  hostPID: true
+  privileged: true
+  runAsUser:
+    rule: RunAsAny
+  seLinux:
+    rule: RunAsAny
+  supplementalGroups:
+    rule: RunAsAny
+  volumes:
+  - '*'
