@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: sock-shop-ingress
+  namespace: sock-shop
+spec:
+  rules:
+  - host: demo.5bd1269b11fc4c7c128e.kpnappfactory.nl
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: front-end
+          servicePort: 80
