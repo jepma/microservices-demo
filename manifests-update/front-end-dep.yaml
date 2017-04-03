@@ -15,11 +15,11 @@ spec:
     metadata:
       labels:
         name: front-end
-        version: 2.0.0
     spec:
       containers:
       - name: front-end
         image: jepmam/microservices-demo-frontend:2.0.0
+        imagePullPolicy: Always
         resources:
           limits:
             cpu: 300m
