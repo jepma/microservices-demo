@@ -44,8 +44,8 @@ $ kubectl create -f manifests-start -f autoscaling/front-end-hsc.yaml
 ## Update image
 
 ```
-$ kubectl replace -f manifests-update/front-end-dep.yaml
-$ kubectl rollout status deployment/front-end --namespace=sock-shop
+$ kubectl replace -f manifests-update/front-end-dep.yaml && \
+  kubectl rollout status deployment/front-end --namespace=sock-shop
 ```
 
 ## Rollback
