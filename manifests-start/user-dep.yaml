@@ -18,11 +18,11 @@ spec:
         image: weaveworksdemos/user:0.4.4
         resources:
           limits:
-            cpu: 500m
-            memory: 500Mi
-          requests:
             cpu: 300m
-            memory: 500Mi
+            memory: 1000Mi
+          requests:
+            cpu: 100m
+            memory: 400Mi
         ports:
         - containerPort: 80
         env:
@@ -43,11 +43,11 @@ spec:
           httpGet:
             path: /health
             port: 80
-          initialDelaySeconds: 300
+          initialDelaySeconds: 400
           periodSeconds: 3
         readinessProbe:
           httpGet:
             path: /health
             port: 80
-          initialDelaySeconds: 180
+          initialDelaySeconds: 360
           periodSeconds: 3
