@@ -1,0 +1,8 @@
+[Unit]
+Description=LST-Demo-Service
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+ExecStart=/usr/bin/bash -c 'while true; do /bin/bash /opt/demo-files/microservices-demo/scripts/run-demo.sh; echo "done with this iteration!"; done'

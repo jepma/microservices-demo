@@ -15,5 +15,5 @@ fi
 echo "Rollout status...."
 kubectl rollout status deployment/front-end --namespace=sock-shop
 
-echo "Now we sleep for 2 minutes..."
-sleep 120
+echo "Now we sleep for 4 minutes..."
+sleep 240
